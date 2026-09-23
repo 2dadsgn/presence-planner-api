@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: presence-planner-api
+  profiles:
+    active: dev
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+app:
+  cors:
+    allowed-origins: http://localhost:4200

@@ -1,0 +1,23 @@
+# Optional: a local Postgres to run the API in "azuread" (production-shaped)
+# mode instead of the default H2 dev database.
+#
+#   docker compose up -d
+#   mvn spring-boot:run -Dspring-boot.run.profiles=azuread \
+#     -DDB_URL=jdbc:postgresql://localhost:5432/presence_planner \
+#     -DDB_USERNAME=presence_planner -DDB_PASSWORD=presence_planner \
+#     -DAZURE_AD_ISSUER_URI=... -DAZURE_AD_API_AUDIENCE=...
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: presence_planner
+      POSTGRES_USER: presence_planner
+      POSTGRES_PASSWORD: presence_planner
+    ports:
+      - "5432:5432"
+    volumes:
+      - presence_planner_pg_data:/var/lib/postgresql/data
+
+volumes:
+  presence_planner_pg_data:
