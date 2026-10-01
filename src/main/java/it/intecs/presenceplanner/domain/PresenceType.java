@@ -12,8 +12,8 @@ public enum PresenceType {
   OFFICE("office"),
   REMOTE("remote"),
   VACATION("vacation"),
-  SICK("sick"),
-  OFF("off");
+  CLIENT("client"),
+  NOTSET("notset");
 
   private final String id;
 
