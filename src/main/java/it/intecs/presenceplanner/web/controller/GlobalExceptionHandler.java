@@ -1,4 +1,4 @@
-package it.intecs.presenceplanner.web;
+package it.intecs.presenceplanner.web.controller;
 
 import jakarta.persistence.EntityNotFoundException;
 import java.time.Instant;

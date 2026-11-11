@@ -1,4 +1,4 @@
-package it.intecs.presenceplanner.web;
+package it.intecs.presenceplanner.web.controller;
 
 import it.intecs.presenceplanner.domain.PresenceException;
 import it.intecs.presenceplanner.domain.PresenceType;

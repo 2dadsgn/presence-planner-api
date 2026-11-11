@@ -1,4 +1,4 @@
-package it.intecs.presenceplanner.web;
+package it.intecs.presenceplanner.web.controller;
 
 import it.intecs.presenceplanner.domain.Team;
 import it.intecs.presenceplanner.domain.User;
