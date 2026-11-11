@@ -10,10 +10,12 @@ import java.util.Map;
 public final class PresenceDtos {
   private PresenceDtos() {}
 
-  public record MonthResponse(String month, Map<LocalDate, PresenceType> assignments) {}
+  public record MonthResponse(@NotEmpty List<DateEntry> presences) {}
+
+  public record DateEntry(LocalDate date, PresenceType type){}
 
   public record AssignRequest(
-      @NotEmpty List<LocalDate> dates, @NotNull PresenceType type) {}
+      @NotEmpty List<DateEntry> presences) {}
 
   public record ClearRequest(@NotEmpty List<LocalDate> dates) {}
 }
